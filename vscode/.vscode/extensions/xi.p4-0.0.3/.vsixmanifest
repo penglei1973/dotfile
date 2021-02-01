@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="p4" Version="0.0.3" Publisher="xi"/>
+    <DisplayName>P4 Highlighting</DisplayName>
+    <Description xml:space="preserve">Syntax highlight for P4 language</Description>
+    <Tags>p4,P4,__ext_.p4</Tags>
+    <Categories>Languages</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://bitbucket.org/shouxi/vscode-p4" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://bitbucket.org/shouxi/vscode-p4" />
+        
+        <Property Id="Microsoft.VisualStudio.Services.Links.Repository" Value="https://bitbucket.org/shouxi/vscode-p4" />
+        
+      
+      
+      
+      
+      
+    </Properties>
+    <License>extension/LICENSE.txt</License>
+    <Icon>extension/images/p4-logo.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/images/p4-logo.png" Addressable="true" />
+  </Assets>
+</PackageManifest>

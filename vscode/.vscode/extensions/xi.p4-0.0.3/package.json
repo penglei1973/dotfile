@@ -1,0 +1,45 @@
+{
+	"name": "p4",
+	"displayName": "P4 Highlighting",
+	"description": "Syntax highlight for P4 language",
+	"version": "0.0.3",
+	"publisher": "xi",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"icon": "images/p4-logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/shouxi/vscode-p4"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "p4",
+				"aliases": [
+					"P4",
+					"p4"
+				],
+				"extensions": [
+					".p4"
+				],
+				"configuration": "./p4.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "p4",
+				"scopeName": "source.p4",
+				"path": "./syntaxes/p4.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "18a6a24c-7cac-42f5-92c8-d3049bf3a6e2",
+		"publisherId": "b0c79644-4382-4a1f-b498-aef78cf3cde3",
+		"publisherDisplayName": "xi"
+	}
+}

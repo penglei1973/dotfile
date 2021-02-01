@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/sde/bf-sde-9.1.1/pkgsrc/switch-p4-16/schema'
+let g:netrw_dirhist_2='/sde/bf-sde-9.1.1/pkgsrc/switch-p4-16/schema/asicObj'
+let g:netrw_dirhist_3='/sde/bf-sde-9.1.1/pkgsrc/switch-p4-16/schema'
+let g:netrw_dirhist_4='/sde/bf-sde-9.1.1/pkgsrc/switch-p4-16/schema/appObj'
+let g:netrw_dirhist_5='/sde/bf-sde-9.1.1/pkgsrc/switch-p4-16/api/switch_tna'

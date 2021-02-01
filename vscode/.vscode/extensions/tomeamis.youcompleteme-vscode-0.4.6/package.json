@@ -1,0 +1,159 @@
+{
+	"name": "youcompleteme-vscode",
+	"displayName": "youcompleteme-vscode",
+	"description": "YCMD client for VSCode",
+	"version": "0.4.6",
+	"publisher": "Tomeamis",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Tomeamis/youcompleteme-vscode"
+	},
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:cpp",
+		"onLanguage:c"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "YouCompleteMe configuration",
+			"properties": {
+				"YouCompleteMe.ycmdPath": {
+					"type": "string",
+					"default": "",
+					"description": "Path to ycmd."
+				},
+				"YouCompleteMe.pythonPath": {
+					"type": "string",
+					"default": "",
+					"description": "Path to the python interpreter executable."
+				},
+				"YouCompleteMe.filetypes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"cpp",
+							"c"
+						]
+					},
+					"default": [
+						"cpp",
+						"c"
+					],
+					"description": "Filetypes for which YouCompleteMe will work."
+				},
+				"YouCompleteMe.triggerStrings.cpp": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"->",
+							".",
+							"::",
+							"/",
+							"\"",
+							"<"
+						]
+					},
+					"default": [
+						"->",
+						".",
+						"::",
+						"/",
+						"\"",
+						"<"
+					],
+					"description": "The trigger char sequences for Ycmd to complete in C++ files"
+				},
+				"YouCompleteMe.triggerStrings.c": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"->",
+							".",
+							"/",
+							"\"",
+							"<"
+						]
+					},
+					"default": [
+						"->",
+						".",
+						"/",
+						"\"",
+						"<"
+					],
+					"description": "The trigger char sequences for Ycmd to complete in C files"
+				},
+				"YouCompleteMe.reparseTimeout": {
+					"type": "number",
+					"default": 1000,
+					"description": "The inactivity time after which the current document will be reparsed (in ms)"
+				},
+				"YouCompleteMe.logLevel": {
+					"type": "string",
+					"default": "info",
+					"description": "Controls log verbosity",
+					"enum": [
+						"all",
+						"trace",
+						"debug",
+						"info",
+						"warning",
+						"error",
+						"fatal",
+						"none"
+					]
+				},
+				"YouCompleteMe.reparseWaitDelay": {
+					"type": "number",
+					"default": 100,
+					"description": "The amount of time in milliseconds to wait to retry a request that was denied because the file was still parsing"
+				},
+				"YouCompleteMe.fallbackToSemantic": {
+					"type": "boolean",
+					"default": true,
+					"description": "When set to true, if a non-semantic completions request returns nothing, YCM will try to get semantic completions"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "YcmShutdownServer",
+				"title": "YCM: Shutdown server"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"json-memory": "^1.0.3",
+		"make-dir": "^1.3.0"
+	},
+	"devDependencies": {
+		"@types/make-dir": "^1.0.3",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.0.43",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6"
+	},
+	"__metadata": {
+		"id": "98936c48-9a08-4637-959a-93b1daa6b5fd",
+		"publisherId": "545c76e5-a3af-48d7-a8a3-57f236ec0ace",
+		"publisherDisplayName": "Tomeamis"
+	}
+}
